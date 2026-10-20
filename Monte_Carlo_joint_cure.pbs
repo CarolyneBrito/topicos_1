@@ -20,8 +20,7 @@ export NUMEXPR_NUM_THREADS=1
 # If your cluster uses environment modules, uncomment and adapt:
 # module load R
 
-command -v Rscript >/dev/null 2>&1 || { echo 'ERROR: Rscript is not available. Load the R module first.' >&2; exit 1; }
-test -f Monte_Carlo_joint_cure.R || { echo 'ERROR: Monte_Carlo_joint_cure.R not found.' >&2; exit 1; }
+module load R/4.4.2 
 
 echo "Job ID: ${PBS_JOBID:-unknown}"
 echo "Host: $(hostname)"
